@@ -13,6 +13,16 @@ namespace PizzaVizsga
         static void Main(string[] args)
         {
             futars = adatbazis.GetAllFutar();
+            feladat01();
+        }
+
+        private static void feladat01()
+        {
+            Console.WriteLine("1.feladat");
+            foreach (var item in futars)
+            {
+                Console.WriteLine($"\t {item.fazon} {item.fnev} {item.ftel} {item.ertek}");
+            }
         }
     }
 }

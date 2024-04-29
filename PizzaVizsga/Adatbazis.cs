@@ -19,7 +19,6 @@ namespace PizzaVizsga
             builder.UserID = "root";
             builder.Database = "pizza";
             builder.Password = "";
-            builder.CharacterSet = "utf-8";
             _connection = new MySqlConnection(builder.ConnectionString);
             _command = _connection.CreateCommand();
             try
@@ -58,6 +57,7 @@ namespace PizzaVizsga
             using (MySqlDataReader dr = _command.ExecuteReader())
             {
                 Futar futar =new Futar(dr.GetInt32("fazon"),dr.GetString("fnev"),dr.GetString("ftel"),dr.GetInt32("ertek"));
+                futars.Add(futar);
             }
             return futars;
         }
