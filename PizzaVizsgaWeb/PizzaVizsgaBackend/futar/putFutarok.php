@@ -14,9 +14,9 @@ $ftel = $adatJSON->ftel;
 
 require_once './database.php';
 
-$SQL = "UPDATE `futar` SET `fnev`=?,`ftel` = ? WHERE `fazon` = ? ";
+$SQL = "UPDATE `futar` SET `fnev`=?,`ftel` = ? WHERE `fazon` =". $keresSzoveg[1];
 $stmt = $connection->prepare($SQL);
-$stmt->bind_param('ssi',$fnev,$ftel,$fazon);
+$stmt->bind_param('ss',$fnev,$ftel);
 if ($stmt->execute()) {    
     http_response_code(201);
    echo 'Sikeres módosítás';
