@@ -7,3 +7,12 @@ label{
 td,th {
     border: 1px solid black;
 }
+.card{
+    margin-top: 10px;
+    
+}
+#beregkep
+{
+    max-height: 100px;
+    text-align: right;
+}

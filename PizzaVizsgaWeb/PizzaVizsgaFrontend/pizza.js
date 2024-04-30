@@ -15,9 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
         data.forEach(element => {
             tabla += `<div class="card col-sm-12 col-md-3 col-lg-3>
             <div class="card-body">
-              <h5 class="card-title">`+element.fnev+`</h5>
-              <p class="card-text">`+element.fazon+`</p>
-              <p class="card-text">`+element.ftel+`</p>
+              <h5 class="card-title">Név: `+element.fnev+`</h5>
+              <p class="card-text">ID: `+element.fazon+`</p>
+              <p class="card-text">Tel.: `+element.ftel+`</p>
             </div>
             </div>`;
         });
